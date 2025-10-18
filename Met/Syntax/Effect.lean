@@ -34,4 +34,9 @@ inductive Modality : Type where
 | abs : EffCtx -> Modality
 | rel : EffExtension -> Modality
 
+/-- Concrete modality -/
+structure CMod : Type where
+  ctx : EffCtx
+  mod : Modality
+
 end Met
