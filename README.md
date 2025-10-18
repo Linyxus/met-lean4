@@ -1,13 +1,12 @@
-# met-lean4
+# Modal Effect Types in Lean 4
 
-## GitHub configuration
+## Setup
 
-To set up your new GitHub repository, follow these steps:
+Running this project requires `lake`. Run `lake build` to download dependencies and build the proofs.
 
-* Under your repository name, click **Settings**.
-* In the **Actions** section of the sidebar, click "General".
-* Check the box **Allow GitHub Actions to create and approve pull requests**.
-* Click the **Pages** section of the settings sidebar.
-* In the **Source** dropdown menu, select "GitHub Actions".
+For using Claude Code with a MCP for typechecking Lean 4 modules, clone `linyxus/ucw` and execute the following command.
 
-After following the steps above, you can remove this section from the README file.
+```bash
+claude mcp add lean4check -- uv --directory <some_path>/ucw/lean4check/ run lean4check --root <some_path>/met-lean4
+```
+
